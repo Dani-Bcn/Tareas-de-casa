@@ -1,42 +1,474 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
   }
-  to {
-    transform: rotate(360deg);
+  html{
+    width: 100vw;
+    background-color: rgba(255, 214, 167, 0.798);
+    background-image: url(../public/img/house2.png);
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: -65px 200px;
+    display: flex;
+    flex-wrap: wrap;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  body{
+    width: 100vw;
+    margin:  0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+  
+  hr{
+    width: 80%;
+    height: 1px;
+    margin: 10px auto;
+    background-color: rgb(166, 166, 166);
+  }
+  img{
+    width: 100px;
+    height: 100px;
+    border: 10px solid rgba(255, 119, 0, 0.6);
+    border-radius: 100%;
+    box-shadow: 0 0 10px rgba(0, 55, 255, 0.761);
+    cursor: pointer;
+    margin: 20px;
+  }
+  button{
+    background-color: rgba(0, 0, 255, 0);
+    border: none;
+    font-size: 25px;
+    font-family: 'Luckiest Guy', cursive;
+    color: rgb(188, 188, 255);
+    text-shadow: 0 0 4px  rgb(21, 21, 21);
+    letter-spacing: 1px;
+    margin: 10px auto;
+    cursor: pointer;
+  }
+  a{
+    font-size: 30px;
+    font-family: 'Luckiest Guy', cursive;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    color: rgb(188, 188, 255);
+    text-shadow: 0 0 4px  rgb(21, 21, 21);
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+  input{
+    width: 150px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 1px 10px 1px 10px;
+    border: none;
+    padding: 10px;
+  }
+  input[type="file"]{
+    width: 147px;
+  }
+  h1{
+      font-size: 50px;
+    font-family: 'Luckiest Guy', cursive;
+    color: rgb(255, 203, 106);
+    text-shadow: 0 0 5px  rgb(21, 21, 21);
+    letter-spacing: 2px;
+    margin: 10px;
+    margin: 30px 0;
+  }
+  h2{
+    font-size: 25px;
+    font-family: 'Luckiest Guy', cursive;
+    color: rgb(188, 188, 255);
+    text-shadow: 0 0 5px  rgb(21, 21, 21);
+    letter-spacing: 2px;
+    margin: 10px;
+    margin: 30px 0;
+  }
+  
+  h4{
+    font-size: 25px;
+    font-family: 'Luckiest Guy', cursive;
+    color: rgb(188, 188, 255);
+    text-shadow: 0 0 4px  rgb(21, 21, 21);
+    letter-spacing: 1px;
+    margin: 35px;
+  }
+  h5{
+    font-size: 30px;
+    font-family: 'Luckiest Guy', cursive;
+    color: rgb(255, 220, 188);
+    text-shadow: 0 0 10px black;
+    letter-spacing: 3px;  
+  }
+  h6{
+    font-size: 25px;
+    font-family: 'Luckiest Guy', cursive;
+    color: rgb(255, 220, 188);
+    text-shadow: 0 0 10px black;
+    letter-spacing: 3px; 
+    margin-top: 30px;
+  }
+  pre{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 25px;
+    text-shadow: 0 0 5px black;
+  }
+  .logo{
+    width: 350px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'Luckiest Guy', cursive;
+    color: rgb(255, 220, 188);
+    text-shadow: 0 0 10px black;
+    letter-spacing: 3px;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .nav{
+    width: 100vw;
+    height: 75px;
+    display: flex;  
+    margin: 0 auto;
+    font-size: 20px;
+    font-family: 'Luckiest Guy', cursive;
+    color: rgb(188, 188, 255);
+    letter-spacing: 1px;
+  }
+  .footer{
+    width: 100vw;
+    height: 75px;
+    display: flex;  
+    font-size: 20px;
+    font-family: 'Luckiest Guy', cursive;
+    color: rgb(188, 188, 255);
+    letter-spacing: 1px;
+  }
+  .nav div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(218, 218, 218, 0.842);
+  }
+  .footer div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(218, 218, 218, 0.842);
+  }
+  .nav a{
+    font-size: 23px;
+  }
+  .cardChild{
+    width: 300px;
+    height: 200px;
+    padding: 50px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px auto;
+    text-align: center;border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Luckiest Guy', cursive; 
+    background-color: rgba(255, 226, 199, 0.696);
+    backdrop-filter: blur(10px);
+    color: rgb(255, 213, 164);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    text-shadow: 0 0 4px  rgb(21, 21, 21);
+    letter-spacing: 1px;
+    margin: 68px auto;
+    box-shadow: 0 0 10px red;
+  }
+  .cardChild a{
+    font-size: 25px;
+  }
+  .cardChildInfo{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    background-color: rgba(199, 216, 255, 0.696);
+    margin: 10px auto;
+    text-align: center;border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Luckiest Guy', cursive;
+    backdrop-filter: blur(10px);
+    color: rgb(255, 213, 164);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    text-shadow: 0 0 4px  rgb(21, 21, 21);
+    letter-spacing: 1px;
+    margin:65px auto;
+  }
+  .containerCardInfo{
+    width: 350px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(201, 242, 255, 0.67);
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .cardInfo{
+    width: 300px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1px auto;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Luckiest Guy', cursive;
+    color: rgb(188, 188, 255);
+    text-shadow: 0 0 4px  rgb(21, 21, 21);
+    letter-spacing: 1px;
+    backdrop-filter: blur(5px);
+  }
+  .cardInfo button{
+    background-color: rgba(0, 0, 255, 0);
+    border: none;
+    font-size: 20px;
+    font-family: 'Luckiest Guy', cursive;
+    color: rgb(188, 188, 255);
+    text-shadow: 0 0 4px  rgb(21, 21, 21);
+    letter-spacing: 1px;
+  }
+  .form{
+    width: 150px;
+    height: 400px;
+    padding: 20px 50px;
+    margin:  95px auto;
+    background-color: rgba(255, 196, 196, 0.683);
+    display: flex;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 25px;  
+    color: rgb(169, 187, 233);
+    text-shadow: 0 0 4px rgb(39, 39, 39);
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+  }
+  .formSignUp{
+    width: 200px;
+    height: 550px;
+    padding: 20px 50px;
+    margin:  75px auto;
+    background-color: rgba(255, 196, 196, 0.683);
+    display: flex;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 25px;
+    color: rgb(169, 187, 233);
+    text-shadow: 0 0 4px rgb(39, 39, 39);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+  }
+  .cardAth button{
+    margin-bottom: 0!important;
+  }
+  .cardPageChild{
+    width: 300px;
+    height: 350px;
+    display: flex;
+    padding: 30px 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(229, 203, 203, 0.69);
+    margin: 55px auto;
+    text-align: center;border-radius: 10px;
+    font-size: 25px;
+    font-family: 'Luckiest Guy', cursive;
+    color: rgb(178, 177, 255);
+    text-shadow: 0 0 4px  rgb(21, 21, 21);
+    backdrop-filter: blur(5px);
+  }
+  .cardTasksEdit{
+    width: 300px;
+    height: 400px;
+    display: flex;
+    padding: 30px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(255, 129, 129, 0.45);
+    margin: 10px 10px;
+    text-align: center;border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Luckiest Guy', cursive;
+    color: rgb(177, 199, 255);
+    text-shadow: 0 0 4px  rgb(21, 21, 21);
+    backdrop-filter: blur(5px);
+  }
+  
+  .cardTasks{
+    width: 300px;
+    height: 350px;
+    display: flex;
+    padding: 30px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(255, 129, 129, 0.45);
+    margin: 10px 10px;
+    text-align: center;border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Luckiest Guy', cursive;
+    color: rgb(177, 199, 255);
+    text-shadow: 0 0 4px  rgb(21, 21, 21);
+    backdrop-filter: blur(5px);
+  }
+  .cardTasks h3{
+    font-size: 25px;
+    color: rgb(255, 213, 164);
+    text-shadow: 0 0 4px  rgb(21, 21, 21);
+    letter-spacing: 2px;
+  }
+  .cardTasks img{
+    width: 100px;
+    height: 100px;
+  }
+  .buttons{
+    width: 100px;
+    height: 100px;
+  }
+  
+  .cardTasksEdit img{
+    width: 100px;
+    height: 100px;
+  }
+  .swal2-popup {
+    font-size: 20px!important;
+    font-family: 'Luckiest Guy', cursive!important;
+    color: rgb(255, 249, 143)!important;
+    text-shadow: 0 0 4px  rgb(0, 0, 0)!important;
+    background-color: rgb(255, 208, 208)!important; 
+  }
+  .marginPage{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 60px auto;
+  }
+  .cardUser{
+    width: 350px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(243, 230, 255, 0.767);
+    backdrop-filter: blur(10px);
+    margin: 10px auto;
+  }
+  .styleIcon{
+    width: 90px;
+    height: 20px;
+    padding: 30px 20px;
+    background-image: url(../public/img/flecha.png);
+    background-repeat: no-repeat;
+    background-size: 90% 90%;
+    background-position:-10px;
+    text-shadow: 0 0 10px rgb(28, 28, 28);
+  }
+  circle{
+    stroke-width: 30px;
+    fill: transparent;
+    margin: 20px;
+  }
+  .containerCircle{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 30px; 
+  }
+  .containerListTasks{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .imgCups{
+    width: 100px;
+    height: 100px;
+    border: none;
+    background-color: rgba(240, 248, 255, 0);
+    box-shadow: none;
+    border-radius: 0px;
+    margin: 0 10px;
+    background-size: 100% 100%;  
+  }
+  .backPageRewards{
+    width: 100x;
+    height: 100%;
+    background-image: url("../public/img/rewards.png");
+    background-size:100% 80%;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(30px);  
+  }
+  .tasksBack{
+    width: 100%;
+    height:100%;
+    background-image: url("../public/img/tasksBack.png");
+    background-size: 100% 900px;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(30px);  
+  }
+  .containerTasksDone{
+    width: 350px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+  .noItems{  
+    margin: 500px 0;
+  }
+  .containerHelp{
+    width: 350px;
+    margin:  0 auto;
+    backdrop-filter: blur(15px);
+  }
+  .containerHelp  h2{
+    font-size: 20px;
+  }
+  .containerHelp  h1{
+    font-size: 20px;
+  }
+  
